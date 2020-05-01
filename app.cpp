@@ -8,7 +8,8 @@ int main()
 
     while (app_running)
     {
-        ActivityManager::start_ticketing(&app_running);
+       ActivityResponse response =  ActivityManager::start_ticketing();
+       app_running = response.is_success;
     }
     
     AppService::close_app();
