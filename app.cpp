@@ -8,7 +8,7 @@ int main()
 
     while (app_running)
     {
-       ActivityResponse response =  ActivityManager::start_ticketing();
+       auto response =  ActivityManager::start_ticketing();
        app_running = response.is_success;
     }
     

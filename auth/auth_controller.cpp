@@ -7,7 +7,8 @@ namespace AuthManager
         user.user_id = "ADMIN_IN_SESSION";
         return user;
     }
-    AuthResponse sign_in_user(SignInUser user){
+    AuthResponse sign_in_user()
+    {
                 AuthResponse response;
 
         return response;
