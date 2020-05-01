@@ -4,6 +4,6 @@
 int main() 
 {
     
-    LogDetail logDetail("Main", Information, "Application is starting up...");
+    LogDetail logDetail("Main", Error, "Application is starting up...");
     LogManager::log(logDetail);
 }
