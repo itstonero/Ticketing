@@ -12,5 +12,8 @@ int main()
        app_running = response.is_success;
     }
     
-    AppService::close_app();
+    AppService::close_app();    
+    
+    std::cout << "Application is Starting Up" << std::endl;
+
 }

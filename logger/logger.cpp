@@ -1,12 +1,11 @@
 #include "logger.h"
-#include "../auth/auth_controller.h"
 
 namespace LogManager
 {
     void log(LogDetail log)
     {   
         std::string today = Utils::get_log_date();
-        std::ofstream file("logs/"+today, std::ios::app);
+        std::ofstream file("logs/"+today+".log", std::ios::app);
         file << log.to_string() + "\n";
         file.close();
     }

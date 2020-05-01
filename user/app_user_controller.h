@@ -1,4 +1,5 @@
 #include "app_user_models.h"
+#include "../auth/auth_service.h"
 
 #ifndef USER_CONTROLLER
 #define USER_CONTROLLER

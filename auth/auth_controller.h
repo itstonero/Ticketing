@@ -1,6 +1,7 @@
 #include "auth_models.h"
 #include "../user/app_user_models.h"
 
+
 namespace AuthManager
 {
     User get_signed_in_user();

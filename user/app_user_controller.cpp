@@ -1,5 +1,4 @@
 #include "app_user_controller.h"
-#include "../auth/auth_service.h"
 
 namespace UserManager
 {

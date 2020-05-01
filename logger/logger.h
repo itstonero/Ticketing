@@ -1,4 +1,5 @@
 #include "../app.h"
+#include "../auth/auth_controller.h"
 #include "../shared/util_model.h"
 
 #ifndef LOGGER
