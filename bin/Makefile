@@ -2,6 +2,8 @@ OBJS = app.o logger.o user_model.o user_controller.o ticket_model.o ticket_contr
 CC = g++
 CFLAGS = -Wall -c
 LFLAGS = -Wall
+LIB = -I../dependencies/
+LINK = -L../dependencies/
 
 all: $(OBJS)
 	$(CC) $(LFLAGS) $(OBJS) -o main
@@ -40,7 +42,7 @@ role_controller.o: ../roles/role_controller.cpp ../roles/role_controller.h
 	$(CC) $(CFLAGS) ../roles/role_controller.cpp -o role_controller.o
 
 auth_model.o: ../auth/auth_models.cpp ../auth/auth_models.h
-	$(CC) $(CFLAGS) ../auth/auth_models.cpp -o auth_model.o
+	$(CC) $(CFLAGS) ../auth/auth_models.cpp $(LIB)openssl/include $(LINK)openssl/lib -o auth_model.o -lssl -lcrypto
 
 auth_controller.o: ../auth/auth_controller.cpp ../auth/auth_controller.h
 	$(CC) $(CFLAGS) ../auth/auth_controller.cpp -o auth_controller.o
