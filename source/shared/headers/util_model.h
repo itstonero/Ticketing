@@ -8,9 +8,9 @@
         std::vector<std::string> errors;
     };
 
-namespace Utils
-{
-    std::string get_time_stamp(time_t time);
-    std::string get_log_date();
-}
+    namespace Utils
+    {
+        std::string GetTimeStamp(time_t time);
+        std::string GetLogDate();
+    }
 #endif
