@@ -4,6 +4,6 @@
 #define WORKER_CONTROLLER
 namespace WorkerActivity
 {
-    void display_dashboard();
+    void Dashboard();
 }
 #endif

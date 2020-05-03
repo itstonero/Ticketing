@@ -5,8 +5,8 @@
 
     namespace SalesManager
     {
-        SalesResponse generate_monthly_summary(SalesFilter filter, std::string staff_id);
-        SalesResponse generate_year_summary(SalesFilter filter, std::string staff_id);
+        SalesResponse GenerateMonthSummary(SalesFilter filter, std::string staff_id);
+        SalesResponse GenerateYearSummary(SalesFilter filter, std::string staff_id);
     }
 
 #endif

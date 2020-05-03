@@ -8,8 +8,8 @@ int main()
 
     while (app_running)
     {
-       auto response =  ActivityManager::start_ticketing();
-       app_running = response.is_success;
+       auto response =  ActivityManager::StartUI();
+       app_running = response.IsSuccess;
     }
     
     AppService::close_app();    

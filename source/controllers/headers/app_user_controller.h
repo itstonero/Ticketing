@@ -1,5 +1,6 @@
 #include "../../models/headers/app_user_models.h"
 #include "../../services/headers/auth_service.h"
+#include "../../services/headers/mapper_service.h"
 
 #ifndef USER_CONTROLLER
 #define USER_CONTROLLER
@@ -7,11 +8,12 @@
 
 namespace UserManager
 {
-    UserResponse create_new_user(UserForCreation user);
-    UserResponse update_user(UserForUpdate user);
-    UserResponse remove_user(std::string user_id);
-    UserResponse toggle_user_lock(std::string user_id);
-    int allUser();
+    UserResponse CreateNewUser(UserForCreation user);
+    UserResponse UpdateUser(UserForUpdate user);
+    UserResponse RemoveUser(std::string user_id);
+    UserResponse ToggleUserLock(std::string user_id);
+
+    int allUser(); //Sample Seeder
 }
 
 #endif

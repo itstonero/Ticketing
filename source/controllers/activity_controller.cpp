@@ -2,7 +2,7 @@
 
 namespace ActivityManager
 {
-    ActivityResponse start_ticketing()
+    ActivityResponse StartUI()
     {
         ActivityResponse response;
 

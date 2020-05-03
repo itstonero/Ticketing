@@ -4,11 +4,11 @@
 #define TICKET_CONTROLLER
     namespace TicketManager
     {
-        TicketResponse generate_ticket(TicketForCreation ticket);
-        TicketResponse revert_ticket_sales(TicketForCreation ticket);
-        TicketResponse delete_ticket(std::string ticket_id);
-        TicketResponse generate_ticket_type(TicketTypeForCreation ticket_type);
-        TicketResponse update_ticket_type(TicketTypeForUpdate ticket_type);
-        TicketResponse remove_ticket_type(std::string ticket_type_id);
+        TicketResponse GenerateTicket(TicketForCreation ticket);
+        TicketResponse RevertTicket(TicketForCreation ticket);
+        TicketResponse DeleteTicket(std::string ticket_id);
+        TicketResponse GenerateTicketType(TicketTypeForCreation ticket_type);
+        TicketResponse UpdateTicketType(TicketTypeForUpdate ticket_type);
+        TicketResponse RemoveTicketType(std::string ticket_type_id);
     }
 #endif

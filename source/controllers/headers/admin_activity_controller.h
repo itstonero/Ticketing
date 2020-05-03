@@ -4,6 +4,6 @@
 #define ADMIN_CONTROLLER
 namespace AdminActivity
 {
-    void display_dashboard();
+    void Dashboard();
 }
 #endif

@@ -12,14 +12,14 @@
 
 struct ActivityResponse
 {
-    bool is_success;
-    std::vector<std::string> errors;
-    std::string message;
+    bool IsSuccess;
+    std::vector<std::string> Errors;
+    std::string Message;
 };
 
 namespace ActivityManager
 {
-    ActivityResponse start_ticketing();
+    ActivityResponse StartUI();
 }
 #endif
 

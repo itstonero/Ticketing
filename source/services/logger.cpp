@@ -21,7 +21,7 @@ std::string LogDetail::to_string()
 
 LogDetail::LogDetail(std::string source, Level level, std::string message, std::string exception = "NULL")
 {
-    User user = AuthManager::get_signed_in_user();
+    User user = AuthManager::CurrentUser();
     this -> source = source;
     this -> level = level;
     this -> message = message;
@@ -31,7 +31,7 @@ LogDetail::LogDetail(std::string source, Level level, std::string message, std::
 }
 LogDetail::LogDetail(std::string source, Level level, std::string message)
 {
-    User user = AuthManager::get_signed_in_user();
+    User user = AuthManager::CurrentUser();
     this -> source = source;
     this -> level = level;
     this -> message = message;

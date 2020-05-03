@@ -2,5 +2,9 @@
 
 namespace AdminActivity
 {
-    void display_dashboard();
+    void Dashboard()
+    {
+        
+    }
+
 }

@@ -2,5 +2,8 @@
 
 namespace SuperAdminActivity
 {
-    void display_dashboard();
+    void Dashboard()
+    {
+        
+    }
 }

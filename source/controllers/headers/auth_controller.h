@@ -4,8 +4,8 @@
 
 namespace AuthManager
 {
-    User get_signed_in_user();
-    AuthResponse sign_in_user();
-    AuthResponse sign_out_user();
-    AuthResponse is_authorized(std::string user_id, std::string role_id);
+    User CurrentUser();
+    AuthResponse SignInUser();
+    AuthResponse SignOutUser();
+    AuthResponse IsAuthorized(std::string user_id, std::string role_id);
 }

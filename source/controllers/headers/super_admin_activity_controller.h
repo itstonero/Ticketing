@@ -4,6 +4,6 @@
 #define SUPER_ADMIN_CONTROLLER
 namespace SuperAdminActivity
 {
-    void display_dashboard();
+    void Dashboard();
 }
 #endif
