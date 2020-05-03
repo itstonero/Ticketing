@@ -1,5 +1,4 @@
 #include "headers/mapper_service.h"
-#include "../../models/headers/app_user_models.h"
 
 namespace MapperManager
 {

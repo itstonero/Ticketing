@@ -1,6 +1,7 @@
 #include "../../models/headers/app_user_models.h"
 #include "../../services/headers/auth_service.h"
 #include "../../services/headers/mapper_service.h"
+#include "../../services/headers/database_services.h"
 
 #ifndef USER_CONTROLLER
 #define USER_CONTROLLER

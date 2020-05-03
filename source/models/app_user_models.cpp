@@ -1,5 +1,6 @@
 #include "headers/app_user_models.h"
 
+
 const std::regex pattern("(\\w+)(\\.|_)?(\\w*)@(\\w+)(\\.(\\w+))+");
 
 

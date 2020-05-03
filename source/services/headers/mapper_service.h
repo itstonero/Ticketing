@@ -1,4 +1,5 @@
 #include "../../shared/headers/shared.h"
+#include "../../models/headers/app_user_models.h"
 
 #ifndef MAPPER
 #define MAPPER
