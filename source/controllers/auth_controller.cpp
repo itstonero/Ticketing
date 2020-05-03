@@ -1,4 +1,4 @@
-#include "auth_controller.h"
+#include "headers/auth_controller.h"
 
 namespace AuthManager
 {

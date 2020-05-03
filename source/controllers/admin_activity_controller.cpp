@@ -1,4 +1,4 @@
-#include "admin_activity_controller.h"
+#include "headers/admin_activity_controller.h"
 
 namespace AdminActivity
 {

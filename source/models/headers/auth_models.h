@@ -22,4 +22,10 @@
             ValidationSummary is_valid();
     };
 
+    namespace AuthService
+    {
+        std::string EncryptData(std::string data);
+        std::string DecryptData(std::string data);
+    }
+    
 #endif

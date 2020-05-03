@@ -1,4 +1,4 @@
-#include "super_admin_activity_controller.h"
+#include "headers/super_admin_activity_controller.h"
 
 namespace SuperAdminActivity
 {
