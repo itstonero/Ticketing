@@ -9,7 +9,7 @@
     class SalesFilter
     {
         public:
-            ValidationSummary is_valid();
+            ValidationSummary IsValid();
     };
 
     struct SalesResponse

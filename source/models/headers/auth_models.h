@@ -19,7 +19,7 @@
     class SignInUser
     {
         public:
-            ValidationSummary is_valid();
+            ValidationSummary IsValid();
     };
 
     namespace AuthService

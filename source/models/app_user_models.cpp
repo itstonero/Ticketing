@@ -3,18 +3,7 @@
 const std::regex pattern("(\\w+)(\\.|_)?(\\w*)@(\\w+)(\\.(\\w+))+");
 
 
-std::string User::to_string()
-{
-    std::string result = "Name = " + this->first_name +" " + this->last_name + ";"
-                        + "Contact Address = " + this->contact_address + ";"
-                        + "Email = " + this->email_address + ";"
-                        + "Phone Number = " + std::to_string(this->phone_number).substr(0, 13) + ";"
-                        + "Locked Out = " + (this->locked_out ? "True" : "False") + ";"
-                        + "Lock Out End Data = " + std::to_string(this -> lock_out_end_date) + ";";
-    return result;
-}
-
-ValidationSummary UserForCreation::is_valid()
+ValidationSummary UserForCreation::IsValid()
 {
     ValidationSummary result;
     bool current_validation = this -> first_name.size() > 2 && this -> first_name.size() < 25;
@@ -56,7 +45,7 @@ ValidationSummary UserForCreation::is_valid()
     return result;
 }
 
-std::string UserForCreation::to_string()
+std::string UserForCreation::ToString()
 {
     std::string result = "Name = " + this->first_name + " " + this->last_name + ";"
                         + "Contact Address = " + this->contact_address + ";"
@@ -75,7 +64,7 @@ UserForCreation::UserForCreation(std::string first, std::string last, std::strin
     this -> password = password;
 }
 
-ValidationSummary UserForUpdate::is_valid()
+ValidationSummary UserForUpdate::IsValid()
 {
     ValidationSummary result;
     bool current_validation = this -> first_name.size() > 2 && this -> first_name.size() < 25;
@@ -117,7 +106,7 @@ ValidationSummary UserForUpdate::is_valid()
     return result;
 }
 
-std::string UserForUpdate::to_string()
+std::string UserForUpdate::ToString()
 {
     std::string result = "Name = " + this->first_name + " " + this->last_name + ";"
                         + "Contact Address = " + this->contact_address + ";"
