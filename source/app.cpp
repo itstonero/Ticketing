@@ -13,6 +13,7 @@ int main()
        app_running = response.IsSuccess;
     }
 
+
     
     AppService::CloseAPP();    
     std::cout << "=============================\n> Device is Powering Off ...<\n=============================" << std::endl;

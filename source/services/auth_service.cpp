@@ -13,8 +13,10 @@ namespace AuthService
 {
     std::string GenerateUniqueID()
     {
-        return std::to_string(++counter);
+        auto newGuid = xg::newGuid();
+        return newGuid;
     }
+
     std::string GeneratePasswordHash(std::string password)
     {
         return password;

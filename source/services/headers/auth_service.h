@@ -1,4 +1,5 @@
 #include "../../shared/headers/shared.h"
+#include <crossguid/guid.hpp>
 
 #ifndef AUTH_SERVICE
 #define AUTH_SERVICE
