@@ -12,13 +12,21 @@ link_directories("source/libraries/openssl/lib")
 include_directories("source/libraries/crossguid/include")
 link_directories("source/libraries/crossguid/lib")
 
-add_library(coreServices ${S_Path}core_services.cpp)
 add_library(activity ${C_Path}activity_controller.cpp)
+
+add_library(coreServices ${S_Path}core_services.cpp)
 add_library(authServices ${S_Path}auth_service.cpp)
+add_library(mapperServices ${S_Path}mapper_service.cpp)
+add_library(databaseServices ${S_Path}database_services.cpp)
+
+add_library(userModels ${M_Path}app_user_models.cpp)
 
 add_executable(mainAPP source/app.cpp)
-target_link_libraries(mainAPP PRIVATE coreServices)
-target_link_libraries(coreServices PUBLIC activity authServices)
+target_link_libraries(mainAPP PRIVATE coreServices userModels)
+target_link_libraries(coreServices PUBLIC activity authServices mapperServices)
+target_link_libraries(mapperServices PRIVATE authServices)
+
+#OpenSSL and CrossGUID libraries Added To AUTH_SERVICES
 target_link_libraries(authServices PRIVATE libssl.a libcrypto.a libcrossguid-dgb.a)
 
 
