@@ -2,12 +2,6 @@
 
 namespace UserManager
 {
-    std::map<std::string, User> allUsers;
-
-    int allUser()
-    {
-        return allUsers.size();
-    }
     
     UserResponse CreateNewUser(UserForCreation user)
     {
@@ -17,8 +11,11 @@ namespace UserManager
         if(validation.is_valid)
         {
             User newUser = MapperManager::Map<User, UserForCreation>(user);
-            allUsers[newUser.user_id] = newUser;
-            response.User = MapperManager::Map<UserForDisplay, User>(newUser);
+            Repository::InsertEntity<User>(&newUser);
+            if(Repository::SaveChanges())
+            {
+                response.User = MapperManager::Map<UserForDisplay, User>(newUser);
+            }
         }
 
         response.IsSuccess = validation.is_valid;
@@ -33,29 +30,36 @@ namespace UserManager
         ValidationSummary validation = userForEditing.IsValid();
         if(validation.is_valid)
         {
-            MapperManager::Map<User, UserForUpdate>(&allUsers[userForEditing.user_id], userForEditing);
+            User user = Repository::FindByID<User>(userForEditing.user_id);
+            MapperManager::Map<User, UserForUpdate>(&user, userForEditing);
+            Repository::UpdateEntity<User>(user);
         }
 
         UserResponse response;
-        response.IsSuccess = validation.is_valid;
-        response.Message = validation.is_valid ? "User Updated !" : "Operation Failed";
+        response.IsSuccess = Repository::SaveChanges();
+        response.Message = response.IsSuccess ? "User Updated !" : "Operation Failed";
         response.Errors = validation.errors;
         return response;
     }
 
     UserResponse RemoveUser(std::string user_id)
     {
+        User userToDelete = Repository::FindByID<User>(user_id);
+        Repository::DeleteEntity<User>(userToDelete);
+
         UserResponse response;
-        allUsers.erase(user_id);
-        response.IsSuccess = true;
+        response.IsSuccess = Repository::SaveChanges();
         return response;
     }
 
     UserResponse ToggleUserLock(std::string user_id)
     {
+        User userToToggleState = Repository::FindByID<User>(user_id);
+        userToToggleState.locked_out = !userToToggleState.locked_out;
+        Repository::UpdateEntity<User>(userToToggleState);
+
         UserResponse response;
-        allUsers[user_id].locked_out = !allUsers[user_id].locked_out;
-        response.IsSuccess = true;
+        response.IsSuccess = Repository::SaveChanges();
         return response;
     }
 }
