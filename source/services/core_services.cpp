@@ -2,7 +2,7 @@
 
 namespace AppService
 {
-    bool initialize_app()
+    bool InitializeAPP()
     {
         /*
             ++ TODO ++
@@ -12,7 +12,7 @@ namespace AppService
         return false;
     }
 
-    void close_app()
+    void CloseAPP()
     {
         /*
             ++ TODO ++

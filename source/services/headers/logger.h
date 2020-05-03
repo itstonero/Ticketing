@@ -1,6 +1,6 @@
-#include "../../shared/headers/shared.h"
 #include "../../shared/headers/util_model.h"
 #include "../../controllers/headers/auth_controller.h"
+#include "../../shared/headers/shared.h"
 
 #ifndef LOGGER
 #define LOGGER
@@ -16,7 +16,7 @@
             std::string source;
             Level level;
             std::string user_id;
-            std::string to_string();
+            std::string ToString();
             LogDetail(std::string source, Level level, std::string message, std::string exception);
             LogDetail(std::string source, Level level, std::string message);
     };
@@ -24,6 +24,6 @@
     
     namespace LogManager
     {
-        void log(LogDetail log);
+        void Log(LogDetail log);
     }
 #endif

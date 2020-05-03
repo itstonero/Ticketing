@@ -4,8 +4,8 @@
 #define CORE
 namespace AppService
 {
-    bool initialize_app();
+    bool InitializeAPP();
 
-    void close_app();
+    void CloseAPP();
 }
 #endif

@@ -5,8 +5,8 @@
 
 namespace AuthService
 {
-    std::string generate_unique_id();
-    std::string generate_password_hash(std::string password);
+    std::string GenerateUniqueID();
+    std::string GeneratePasswordHash(std::string password);
 }
 
 #endif

@@ -4,11 +4,11 @@ int counter = 1; // TODO
 
 namespace AuthService
 {
-    std::string generate_unique_id()
+    std::string GenerateUniqueID()
     {
         return std::to_string(++counter);
     }
-    std::string generate_password_hash(std::string password)
+    std::string GeneratePasswordHash(std::string password)
     {
         return password;
     } 

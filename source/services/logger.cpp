@@ -6,12 +6,12 @@ namespace LogManager
     {   
         std::string today = Utils::get_log_date();
         std::ofstream file("logs/"+today+".log", std::ios::app);
-        file << log.to_string() + "\n";
+        file << log.ToString() + "\n";
         file.close();
     }
 }
 
-std::string LogDetail::to_string()
+std::string LogDetail::ToString()
 {
     std::string result = ("Timestamp = "+ Utils::get_time_stamp(this -> time_stamp) +" || Level = " + std::to_string( this -> level) + 
                             " || Source = "+ this -> source + " || UserID = " + this -> user_id + " || Message = " + this -> message + " || Exception = " + this -> exception);

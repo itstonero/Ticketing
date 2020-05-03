@@ -33,7 +33,7 @@ namespace UserManager
         ValidationSummary validation = userForEditing.IsValid();
         if(validation.is_valid)
         {
-            allUsers[userForEditing.user_id] = MapperManager::Map<User, UserForUpdate>(allUsers[userForEditing.user_id], userForEditing);
+            MapperManager::Map<User, UserForUpdate>(&allUsers[userForEditing.user_id], userForEditing);
         }
 
         UserResponse response;

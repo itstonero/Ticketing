@@ -4,7 +4,7 @@
 
 int main() 
 {
-    bool app_running = AppService::initialize_app();
+    bool app_running = AppService::InitializeAPP();
 
     while (app_running)
     {
@@ -12,7 +12,7 @@ int main()
        app_running = response.IsSuccess;
     }
     
-    AppService::close_app();    
+    AppService::CloseAPP();    
     
     std::cout << "Application is Starting Up" << std::endl;
 
