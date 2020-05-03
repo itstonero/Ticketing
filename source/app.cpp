@@ -1,6 +1,6 @@
-#include "app.h"
-#include "core/core_services.h"
-#include "activity/activity_controller.h"
+#include "shared/headers/shared.h"
+#include "services/headers/core_services.h"
+#include "controllers/headers/activity_controller.h"
 
 int main() 
 {

@@ -3,3 +3,8 @@
 *.o
 *.log
 *.exe
+/build
+/build*
+
+/bin
+/bin*
