@@ -1,5 +1,8 @@
 #include "../../shared/headers/shared.h"
-#include <crossguid/guid.hpp>
+#include <openssl/des.h>
+#include <boost/uuid/uuid.hpp>            
+#include <boost/uuid/uuid_generators.hpp> 
+#include <boost/uuid/uuid_io.hpp>         
 
 #ifndef AUTH_SERVICE
 #define AUTH_SERVICE
