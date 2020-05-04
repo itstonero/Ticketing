@@ -85,3 +85,5 @@ void insertMatchingEntity(T * entity)
 {
     auto className = typeid(T).name;
 }
+
+

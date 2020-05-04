@@ -8,3 +8,7 @@
 
 /bin
 /bin*
+
+*.dll.a
+*.dll
+*.a
