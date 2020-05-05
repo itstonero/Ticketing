@@ -1,3 +1,5 @@
+#include "logger.hpp"
+
 #ifndef CORE
 #define CORE
 namespace AppService

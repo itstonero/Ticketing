@@ -4,7 +4,7 @@ add_library(coreServices appServices/core_services.cpp appServices/core_services
 add_library(databaseServices appServices/database_services.cpp appServices/database_services.hpp)
 add_library(mapperServices appServices/mapper_service.cpp appServices/mapper_service.hpp)
 
-
+target_link_libraries(coreServices PUBLIC loggerServices)
 target_link_libraries(mapperServices PUBLIC appUserModels authControllers authServices)
 target_link_libraries(databaseServices PUBLIC appUserModels)
 target_link_libraries(loggerServices PUBLIC authServices utilities appUserModels authControllers)

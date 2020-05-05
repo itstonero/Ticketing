@@ -4,6 +4,7 @@ namespace ActivityManager
 {
     ActivityResponse StartUI()
     {
+        
         ActivityResponse response;
 
         return response;
