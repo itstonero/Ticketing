@@ -4,7 +4,6 @@
 
 int main()
 {
-  std::cout << "==========================================\n\tApplication is starting up .. \n==========================================" << std::endl;
   bool appRunning = AppService::InitializeAPP();
 
   while(appRunning)
@@ -13,7 +12,6 @@ int main()
     appRunning = appState.IsSuccess;
   }
 
-  std::cout << "==========================================\n\tApplication is shutting down ..\n==========================================" << std::endl;
   AppService::CloseAPP();
   return 0;
 }
