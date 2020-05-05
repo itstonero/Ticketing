@@ -1,46 +1,42 @@
 #include "logger.hpp"
-#include <iostream>
-
-const std::string logPath = "../../../logs/";
-
 
 namespace LogManager
 {
     void LogError(LogDetail log)
     {
-        std::string today = Utils::GetLogDate();
-        std::ofstream file(logPath+today+".log", std::ios::app);
+        std::ofstream file(GetLogDate(), std::ios::app);
         file << log.ToString() << "\n";
         file.close();
     
     }
     void LogWarn(LogDetail log)
     {
-        std::string today = Utils::GetLogDate();
-        std::ofstream file(logPath+today+".log", std::ios::app);
+        std::ofstream file(GetLogDate(), std::ios::app);
         file << log.ToString() << "\n";
         file.close();
     
     }
     void LogInfo(LogDetail log)
     {   
-        std::cout << "Logging Information ..." << std::endl;
-
-        std::string today = Utils::GetLogDate();
-        std::ofstream file(logPath+today+".log", std::ios::app);
+        std::ofstream file(GetLogDate(), std::ios::app);
         file << log.ToString() << "\n";
-        std::cout << "Today : " << today << std::endl;
-        std::cout << "LogPath : " << logPath << std::endl;
         file.close();
     
     }
     void LogFatal(LogDetail log)
     {   
-        std::string today = Utils::GetLogDate();
-        std::ofstream file(logPath+today+".log", std::ios::app);
+        std::ofstream file(GetLogDate(), std::ios::app);
         file << log.ToString() << "\n";
         file.close();
     
+    }
+
+    std::string GetLogDate()
+    {
+        time_t given_time = time(NULL);
+        tm *time = localtime(&given_time);
+        std::string time_stamp = std::to_string(time->tm_year + 1900)+"_"+std::to_string(time->tm_mon + 1)+"_"+std::to_string(time->tm_mday)+"_log";
+        return "logs/"+ time_stamp + ".log";
     }
 }
 
@@ -61,6 +57,7 @@ LogDetail::LogDetail(std::string user_id, std::string source, Level level, std::
     this -> time_stamp = time(0);
     this -> user_id = user_id;
 }
+
 LogDetail::LogDetail(std::string user_id, std::string source, Level level, std::string message)
 {
     this -> source = source;

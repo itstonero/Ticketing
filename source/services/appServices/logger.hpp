@@ -30,5 +30,6 @@
         void LogWarn(LogDetail log);
         void LogInfo(LogDetail log);
         void LogFatal(LogDetail log);
+        std::string GetLogDate();
     }
 #endif
