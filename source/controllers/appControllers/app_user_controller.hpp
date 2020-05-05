@@ -14,7 +14,6 @@ namespace UserManager
     UserResponse RemoveUser(std::string user_id);
     UserResponse ToggleUserLock(std::string user_id);
 
-    int allUser(); //Sample Seeder
 }
 
 #endif

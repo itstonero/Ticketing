@@ -22,7 +22,6 @@ namespace AuthService
     std::string EncryptData(std::string data)
     {
         const char * value = "myPassword";
-        auto hash = DES_crypt(value, "this");
         /*
 
         DES_cblock input_data = {0x01, 0x02, 0x03, 0x04, 0x05, 0x6, 0x7, 0x8};
@@ -32,7 +31,7 @@ namespace AuthService
 
         */
 
-        return hash;
+        return data;
     }
 
     std::string DecryptData(std::string hash)

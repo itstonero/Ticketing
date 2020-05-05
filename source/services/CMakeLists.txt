@@ -5,7 +5,7 @@ add_library(databaseServices appServices/database_services.cpp appServices/datab
 add_library(mapperServices appServices/mapper_service.cpp appServices/mapper_service.hpp)
 
 
-target_link_libraries(mapperServices PUBLIC appUserModels authControllers)
+target_link_libraries(mapperServices PUBLIC appUserModels authControllers authServices)
 target_link_libraries(databaseServices PUBLIC appUserModels)
 target_link_libraries(loggerServices PUBLIC authServices utilities appUserModels authControllers)
 

@@ -1,6 +1,6 @@
-#include "super_admin_activity_controller.h"
-#include "admin_activity_controller.h"
-#include "worker_activity_controller.h"
+#include "super_admin_activity_controller.hpp"
+#include "admin_activity_controller.hpp"
+#include "worker_activity_controller.hpp"
 
 #include <appServices/logger.hpp>
 #include <appControllers/auth_controller.hpp>

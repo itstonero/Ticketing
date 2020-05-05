@@ -1,8 +1,9 @@
 #include <appServices/core_services.hpp>
-#include <appControllers/activity_controller.hpp>
-#include <appServices/database_services.hpp>
-#include <appServices/mapper_service.hpp>
 #include <appModels/app_user_models.hpp>
+#include <appServices/mapper_service.hpp>
+#include <appServices/logger.hpp>
+
+#include <iostream>
 
 int main() 
 {
@@ -14,6 +15,9 @@ int main()
     User newUser = MapperManager::MapUserCreationToUser(user);
     std::cout << "User ID : " << newUser.user_id << std::endl;
     
+    LogDetail log(newUser.user_id, "App Entry", Information, "New User Added....");
+    LogManager::LogInfo(log);
+
     AppService::CloseAPP();    
     std::cout << "=============================\n> Device is Powering Off ...<\n=============================" << std::endl;
 }

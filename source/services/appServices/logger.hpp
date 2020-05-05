@@ -1,9 +1,7 @@
-#include <string>
-#include <appShared/util_model.hpp>
-#include <appModels/app_user_models.hpp>
-#include <appControllers/auth_controller.hpp>
 #include <boost/log/trivial.hpp>
+#include <appShared/util_model.hpp>
 #include <fstream>
+#include <string>
 #include <ctime>
 
 #ifndef LOGGER
@@ -21,8 +19,8 @@
             Level level;
             std::string user_id;
             std::string ToString();
-            LogDetail(std::string source, Level level, std::string message, std::string exception);
-            LogDetail(std::string source, Level level, std::string message);
+            LogDetail(std::string user_id, std::string source, Level level, std::string message, std::string exception);
+            LogDetail(std::string user_id, std::string source, Level level, std::string message);
     };
 
     
