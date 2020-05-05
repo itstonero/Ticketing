@@ -5,9 +5,13 @@
 *.exe
 /build
 /build*
+build
+build*
 
 /bin
 /bin*
+bin
+bin*
 
 *.dll.a
 *.dll
