@@ -1,6 +1,7 @@
 #include "../../shared/headers/util_model.h"
 #include "../../controllers/headers/auth_controller.h"
 #include "../../shared/headers/shared.h"
+#include <boost/log/trivial.hpp>
 
 #ifndef LOGGER
 #define LOGGER
@@ -24,6 +25,9 @@
     
     namespace LogManager
     {
-        void Log(LogDetail log);
+        void LogError(LogDetail log);
+        void LogWarn(LogDetail log);
+        void LogInfo(LogDetail log);
+        void LogFatal(LogDetail log);
     }
 #endif

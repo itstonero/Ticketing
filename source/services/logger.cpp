@@ -1,19 +1,47 @@
 #include "headers/logger.h"
 
+void log(LogDetail log)
+{   
+    std::string today = Utils::GetLogDate();
+    std::ofstream file("logs/"+today+".log", std::ios::app);
+    file << log.ToString() + "\n";
+    file.close();
+}
 namespace LogManager
 {
-    void log(LogDetail log)
-    {   
-        std::string today = Utils::get_log_date();
+    void LogError(LogDetail log)
+    {
+        void log(LogDetail log);
+        std::string today = Utils::GetLogDate();
         std::ofstream file("logs/"+today+".log", std::ios::app);
         file << log.ToString() + "\n";
         file.close();
+    
     }
+    void LogWarn(LogDetail log)
+    {
+        void log(LogDetail log);
+        std::string today = Utils::GetLogDate();
+        std::ofstream file("logs/"+today+".log", std::ios::app);
+        file << log.ToString() + "\n";
+        file.close();
+    
+    }
+    void LogInfo(LogDetail log)
+    {
+        void log(LogDetail log);   
+        std::string today = Utils::GetLogDate();
+        std::ofstream file("logs/"+today+".log", std::ios::app);
+        file << log.ToString() + "\n";
+        file.close();
+    
+    }
+    void LogFatal(LogDetail log);
 }
 
 std::string LogDetail::ToString()
 {
-    std::string result = ("Timestamp = "+ Utils::get_time_stamp(this -> time_stamp) +" || Level = " + std::to_string( this -> level) + 
+    std::string result = ("Timestamp = "+ Utils::GetTimeStamp(this -> time_stamp) +" || Level = " + std::to_string( this -> level) + 
                             " || Source = "+ this -> source + " || UserID = " + this -> user_id + " || Message = " + this -> message + " || Exception = " + this -> exception);
 
     return result;
